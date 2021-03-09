@@ -15,9 +15,27 @@
                         class="bg-gray-100 border-2 w-full p-3 rounded-lg
                         @error('name') border-red-500 @enderror
                         "
-                        value=""
+                        value="{{ old('name') }}"
                     >
                     @error('name')
+                        <div class="text-red-500 mt-2 text-sm">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="username" class="sr-only">Username</label>
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="jdoe718"
+                        class="bg-gray-100 border-2 w-full p-3 rounded-lg
+                        @error('username') border-red-500 @enderror
+                        "
+                        value="{{ old('name') }}"
+                    >
+                    @error('username')
                         <div class="text-red-500 mt-2 text-sm">
                             {{ $message }}
                         </div>
@@ -33,7 +51,7 @@
                         class="bg-gray-100 border-2 w-full p-3 rounded-lg
                         @error('email') border-red-500 @enderror
                         "
-                        value=""
+                        value="{{ old('email') }}"
                     >
                     @error('email')
                         <div class="text-red-500 mt-2 text-sm">
@@ -60,7 +78,7 @@
                     @enderror
                 </div>
                 <div class="mb-4">
-                    <label for="password_confirmation" class="sr-only">Confirm password_confimation</label>
+                    <label for="password_confirmation" class="sr-only">Confirm password</label>
                     <input
                         type="password"
                         name="password_confirmation"
