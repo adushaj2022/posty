@@ -12,16 +12,9 @@
                 @csrf
                 <div class="mb-4">
                     <label for="email" class="sr-only">Email</label>
-                    <input
-                        type="text"
-                        name="email"
-                        id="email"
-                        placeholder="jdoe@gmail.com"
-                        class="bg-gray-100 border-2 w-full p-3 rounded-lg
-                        @error('email') border-red-500 @enderror
-                        "
-                        value="{{ old('email') }}"
-                    >
+                    <input type="text" name="email" id="email" placeholder="jdoe@gmail.com" class="bg-gray-100 border-2 w-full p-3 rounded-lg
+                            @error('email') border-red-500 @enderror
+                            " value="{{ old('email') }}">
                     @error('email')
                         <div class="text-red-500 mt-2 text-sm">
                             {{ $message }}
@@ -30,21 +23,21 @@
                 </div>
                 <div class="mb-4">
                     <label for="password" class="sr-only">Password</label>
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="password"
-                        class="bg-gray-100 border-2 w-full p-3 rounded-lg
-                        @error('password') border-red-500 @enderror
-                        "
-                        value=""
-                    >
+                    <input type="password" name="password" id="password" placeholder="password" class="bg-gray-100 border-2 w-full p-3 rounded-lg
+                            @error('password') border-red-500 @enderror
+                            " value="">
                     @error('password')
                         <div class="text-red-500 mt-2 text-sm">
                             {{ $message }}
                         </div>
                     @enderror
+                </div>
+
+                <div class="mb-4">
+                    <div class="flex items-center">
+                        <input type="checkbox" name="remember" id="remember" class="mr-2">
+                        <label for="remember">Remember me</label>
+                    </div>
                 </div>
 
                 <div>
